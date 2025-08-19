@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Simple</title>
+    <!-- Chargement de Tailwind CSS pour un style rapide et réactif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Définition de la police Inter pour une meilleure lisibilité */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+    <!-- En-tête du site -->
+    <header class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo ou Titre du site -->
+            <h1 class="text-2xl font-bold text-blue-600 rounded-md p-2">Mon Site</h1>
+            <!-- Navigation principale -->
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors duration-200">Accueil</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors duration-200">À propos</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors duration-200">Services</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 rounded-md transition-colors duration-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal du site -->
+    <main class="flex-grow container mx-auto p-6 my-8 bg-white rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold mb-4 text-center">Bienvenue sur mon site !</h2>
+        <p class="text-lg leading-relaxed text-gray-700 mb-4">
+            Ceci est une interface de base pour votre nouveau site web. Vous pouvez facilement modifier ce contenu pour y ajouter vos propres informations, images ou autres éléments.
+        </p>
+        <p class="text-base text-gray-600">
+            N'hésitez pas à explorer les possibilités de Tailwind CSS pour personnaliser l'apparence de votre site. C'est un excellent point de départ !
+        </p>
+    </main>
+
+    <!-- Pied de page du site -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Mon Site Simple. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
