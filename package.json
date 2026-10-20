@@ -1,0 +1,16 @@
+{
+  "name": "usb-iso-flasher",
+  "version": "1.0.0",
+  "description": "Ecrit une image ISO/IMG sur une cle USB pour la rendre bootable (type Rufus/Etcher), avec une interface HTML.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "sudo-prompt": "^9.2.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}

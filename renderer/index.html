@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" />
+  <title>USB ISO Flasher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>USB ISO Flasher</h1>
+      <p class="subtitle">Écrit une image ISO/IMG sur une clé USB pour la rendre bootable.</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Image disque</h2>
+      <div class="row">
+        <button id="pick-iso-btn" class="btn">Choisir un fichier .iso/.img</button>
+        <span id="iso-label" class="file-label">Aucun fichier sélectionné</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row header-row">
+        <h2>2. Clé USB</h2>
+        <button id="refresh-btn" class="btn btn-secondary">Rafraîchir</button>
+      </div>
+      <select id="drive-select" class="select">
+        <option value="">Aucune clé USB détectée</option>
+      </select>
+      <p class="hint">Seuls les périphériques amovibles/USB sont listés.</p>
+    </section>
+
+    <section class="card">
+      <h2>3. Écriture</h2>
+      <button id="flash-btn" class="btn btn-danger" disabled>Écrire sur la clé</button>
+      <div class="progress-wrap">
+        <div id="progress-bar" class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+        <span id="progress-text" class="progress-text"></span>
+      </div>
+    </section>
+
+    <section class="card log-card">
+      <h2>Journal</h2>
+      <pre id="log" class="log"></pre>
+    </section>
+  </main>
+
+  <div id="confirm-overlay" class="overlay hidden">
+    <div class="modal">
+      <h3>Confirmer l'écriture</h3>
+      <p>Toutes les données présentes sur ce périphérique vont être <strong>définitivement effacées</strong> :</p>
+      <ul id="confirm-details" class="confirm-details"></ul>
+      <p class="warning">Cette action est irréversible. Vérifie bien que c'est la bonne clé.</p>
+      <div class="row modal-actions">
+        <button id="confirm-cancel" class="btn btn-secondary">Annuler</button>
+        <button id="confirm-ok" class="btn btn-danger">Oui, effacer et écrire</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

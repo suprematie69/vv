@@ -1,0 +1,196 @@
+:root {
+  --bg: #0f1115;
+  --card-bg: #181b22;
+  --border: #2a2e37;
+  --text: #e6e8ec;
+  --muted: #9aa1ad;
+  --accent: #4f8cff;
+  --danger: #e5484d;
+  --danger-hover: #c93a3e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 20px;
+  font-size: 13px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-row {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.header-row h2 {
+  margin: 0;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(1.1);
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #2a2e37;
+  color: var(--text);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.file-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.select {
+  width: 100%;
+  background: #11141a;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+
+.progress-wrap {
+  margin-top: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #11141a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.progress-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.log-card .log {
+  background: #0b0d11;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  height: 140px;
+  overflow-y: auto;
+  font-size: 11px;
+  color: #8fd19e;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  max-width: 420px;
+  width: 90%;
+}
+.modal h3 {
+  margin: 0 0 10px;
+}
+.confirm-details {
+  background: #11141a;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin: 10px 0;
+}
+.warning {
+  color: var(--danger);
+  font-size: 13px;
+}
+.modal-actions {
+  justify-content: flex-end;
+  margin-top: 16px;
+}
